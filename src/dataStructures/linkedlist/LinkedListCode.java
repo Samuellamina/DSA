@@ -10,9 +10,14 @@ public class LinkedListCode {
         singlyLinkedList.insertInLinkedList(7, 3);
         singlyLinkedList.insertInLinkedList(8, 4);
         singlyLinkedList.insertInLinkedList(9, 0);// insert at beginning
-        //System.out.println(singlyLinkedList.head.value);
+
 
         singlyLinkedList.traverseSinglyLinkedList();
         singlyLinkedList.searchNode(7);
+
+        singlyLinkedList.deletionOfNode(3);
+        System.out.println(singlyLinkedList.searchNode(7));
+
+        singlyLinkedList.deleteSinglyLinkedList();
     }
 }

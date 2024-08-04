@@ -108,7 +108,7 @@ public class SinglyLinkedList {
     }
 
     //  Delete Entire SinglyLinkedList
-    public void deleteSLL() {
+    public void deleteSinglyLinkedList() {
         head = null;
         tail = null;
         System.out.println("The SLL deleted successfully");
