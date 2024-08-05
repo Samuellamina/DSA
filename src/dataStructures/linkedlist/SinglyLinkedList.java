@@ -49,19 +49,20 @@ public class SinglyLinkedList {
         } else {
             Node tempNode = head;
             for (int i = 0; i < size; i++) {
-                System.out.println(tempNode.value);
+                System.out.print(tempNode.value);
                 if (i != size - 1) {
-                    System.out.println(" -> ");
+                    System.out.print(" -> ");
                 }
                 tempNode = tempNode.next;
             }
+            System.out.println("\n");
         }
     }
 
     boolean searchNode(int nodeValue) {
         if (head != null) {
             Node tempNode = head;
-            for (int i=0; i<size; i++) {
+            for (int i = 0; i < size; i++) {
                 if (tempNode.value == nodeValue) {
                     System.out.print("Found the node at location: " +i+"\n");
                     return true;
@@ -111,8 +112,7 @@ public class SinglyLinkedList {
     public void deleteSinglyLinkedList() {
         head = null;
         tail = null;
-        System.out.println("The SLL deleted successfully");
-
+        System.out.println("The linkedList deleted successfully");
     }
 
 
