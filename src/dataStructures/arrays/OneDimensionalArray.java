@@ -1,6 +1,8 @@
 package dataStructures.arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class OneDimensionalArray {
     public static void main(String[] args) {
@@ -38,6 +40,7 @@ public class OneDimensionalArray {
     }
 
     public static void combineArray(int[] arr1, int[] arr2) {
+        int qq = 29;
         int[] result = new int[arr1.length];
         for (int i = 0; i < arr1.length; i++) {
             result[i] = arr1[i] + arr2[i];
@@ -48,7 +51,7 @@ public class OneDimensionalArray {
     // The Sliding Window Technique to find maxsum of a sub array
     private static void maxSum(int[] arr, int k) {
         int maxSum = 0; // Stores the maximum sum we have found so far
-        int windowSum = 0; // Stores the current sum of the window
+        int windowSum = 0; // Stores the current sum of the windowa
 
         // First, calculate the sum of the first window (first 'k' elements)
         for (int i = 0; i < k; i++) {
@@ -255,5 +258,22 @@ public class OneDimensionalArray {
     public static void deleteElement(int[] arr) {
         arr[2] = Integer.MIN_VALUE;
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static List<Integer> icecreamParlor(int m, List<Integer> arr) {
+        // Write your code here
+
+        List<Integer> indices = new ArrayList<>(2);
+
+        for (int i = 0; i < arr.size(); i++) {
+            for (int j = i + 1; j < arr.size(); j++) {
+                if(arr.get(i) + arr.get(j) == m) {
+                    indices.add(i + 1);
+                    indices.add(j + 1);
+                    return indices;
+                }
+            }
+        }
+        return indices;
     }
 }
