@@ -34,7 +34,7 @@ public class OneDimensionalArray {
 //     binarySearchArray(arr3, 7);
 //        maxSum(arr3, 4);
 //        maxSubArray(arr3);
-        combineArray(arr2, arr3);
+        // combineArray(arr2, arr3);
     }
 
     public static void combineArray(int[] arr1, int[] arr2) {
