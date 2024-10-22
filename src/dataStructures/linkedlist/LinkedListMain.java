@@ -1,13 +1,15 @@
 package dataStructures.linkedlist;
 
+import java.util.LinkedList;
+
 public class LinkedListMain {
     public static void main(String[] args) {
         // SINGLY LINKED LIST
-//        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
 //        singlyLinkedList.createSinglyLinkedList(5);
 //        //System.out.println(singlyLinkedList.head.value);
 //
-//        singlyLinkedList.insertInLinkedList(6, 1);
+        singlyLinkedList.insertInLinkedList(6, 1);
 //        singlyLinkedList.insertInLinkedList(7, 3);
 //        singlyLinkedList.insertInLinkedList(8, 4);
 //        singlyLinkedList.insertInLinkedList(9, 0);
@@ -36,7 +38,6 @@ public class LinkedListMain {
         circularSinglyLinkedList.traverseCSSinglyLinkedList();
         circularSinglyLinkedList.deleteCircularSingleLinkedList();
         circularSinglyLinkedList.traverseCSSinglyLinkedList();
-
 
     }
 }

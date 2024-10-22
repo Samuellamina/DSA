@@ -15,6 +15,30 @@ public class SinglyLinkedList {
         return head;
     }
 
+    public static Node insertNodeAtPosition(Node llist, int data, int position) {
+        //Node newNode = new Node(data);
+        Node newNode = new Node();
+
+        if(position == 0) {
+            newNode.next = llist;
+            return newNode;
+
+        }
+        Node current = llist;
+        int currentPosition = 0;
+
+
+        while (currentPosition < position - 1 && current != null) {
+            current = current.next;
+            currentPosition++;
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+
+        return llist;
+    }
+
     public void insertInLinkedList(int nodeValue, int location) {
         Node node = new Node();
         node.value = nodeValue;

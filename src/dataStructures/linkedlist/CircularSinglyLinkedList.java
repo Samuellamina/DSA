@@ -123,4 +123,28 @@ public class CircularSinglyLinkedList {
         }
     }
 
+    /*To detect if a linked list contains a cycle, the most common approach is to use
+    Floyd's Cycle Detection Algorithm, also known as the Tortoise and Hare algorithm.
+    This method involves using two pointers:
+    A slow pointer (tortoise) that moves one step at a time.
+    A fast pointer (hare) that moves two steps at a time.
+    If there is a cycle in the linked list, these two pointers will eventually meet at some point.
+    If there is no cycle, the fast pointer will reach the end of the list*/
+    public static boolean has_cycle(Node head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
