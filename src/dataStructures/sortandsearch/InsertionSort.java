@@ -19,6 +19,37 @@ public class InsertionSort {
         }
     }
 
+    static void insertionSort1(int n, int[] arr) {
+        int elementToSort = arr[n];
+        int index = n;
+        while (index > 0) {
+            if (arr[index - 1] < elementToSort) {
+                break;
+            }
+            arr[index] = arr[index - 1];
+            // printArray(arr); Now we don't need to print here.
+            index--;
+        }
+        arr[index] = elementToSort;
+        printArray(arr);
+    }
+
+    static void insertionSort2(int n, int[] arr) {
+        // It doesn't make sense to start at index 0, as we will not
+        // need to move anything.
+        for (int i = 1; i < arr.length; i++) {
+            insertionSort1(i, arr);
+        }
+    }
+
+
+    private static void printArray(int [] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         int[] arr = {3, 7, 12, 2};
         insertionSort(arr);
